@@ -23,6 +23,7 @@ export const ARMOIRE_RELEASE_DATES = {
   beekeepersSet: { year: 2025, month: 6 },
   flyFishingSet: { year: 2025, month: 7 },
   redWaistcoatSet: { year: 2025, month: 8 },
+  orangeLoungewear: { year: 2025, month: 9 },
 };
 
 export const EGGS_RELEASE_DATES = {
