@@ -542,6 +542,11 @@ const armor = {
     str: 8,
     set: 'redWaistcoatSet',
   },
+  softOrangeSuit: {
+    con: 8,
+    str: 8,
+    set: 'orangeLoungewear',
+  },
 };
 
 const body = {
@@ -1108,6 +1113,13 @@ const head = {
     int: 8,
     set: 'redWaistcoatSet',
   },
+  floppyOrangeHat: {
+    con: 4,
+    int: 4,
+    per: 4,
+    str: 4,
+    set: 'orangeLoungewear',
+  },
 };
 
 const shield = {
@@ -1480,6 +1492,11 @@ const shield = {
     str: 7,
     int: 7,
     set: 'flyFishingSet',
+  },
+  softOrangePillow: {
+    int: 8,
+    per: 8,
+    set: 'orangeLoungewear',
   },
 };
 

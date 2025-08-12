@@ -558,7 +558,16 @@
   "weaponSpecialSummer2025HealerText": "Sea Angel Wing Paddle",
   "weaponSpecialSummer2025HealerNotes": "Draw a figure eight as you move forward, making great progress on your tasks. Increases Intelligence by <%= int %>. Limited Edition Summer 2025 Gear.",
   "weaponSpecialSummer2025MageText": "Branch Coral",
-  "weaponSpecialSummer2025MageNotes": "Branch out with your talents and skills to tackle a variety of tasks. Increases Intelligence by <%= int %> and Perception by <%= per %>. Limited Edition Summer 2025 Gear", 
+  "weaponSpecialSummer2025MageNotes": "Branch out with your talents and skills to tackle a variety of tasks. Increases Intelligence by <%= int %> and Perception by <%= per %>. Limited Edition Summer 2025 Gear.", 
+
+  "weaponSpecialFall2025WarriorText": "Sasquatch Axe",
+  "weaponSpecialFall2025WarriorNotes": "A mighty weapon to cut a safe path through an autumn forest full of complications. Increases Strength by <%= str %>. Limited Edition Fall 2025 Gear.",
+  "weaponSpecialFall2025RogueText": "Skeleton Blade",
+  "weaponSpecialFall2025RogueNotes": "A mighty weapon to cut a safe path through an autumn forest full of obstacles. Increases Strength by <%= str %>. Limited Edition Fall 2025 Gear.",
+  "weaponSpecialFall2025HealerText": "Kobold Axe",
+  "weaponSpecialFall2025HealerNotes": "A mighty weapon to cut a safe path through an autumn forest full of impediments. Increases Intelligence by <%= int %>. Limited Edition Fall 2025 Gear.",
+  "weaponSpecialFall2025MageText": "Masked Ghost Axe",
+  "weaponSpecialFall2025MageNotes": "A mighty weapon to cut a safe path through an autumn forest full of frights. Increases Intelligence by <%= int %> and Perception by <%= per %>. Limited Edition Fall 2025 Gear.", 
 
   "weaponMystery201411Text": "Pitchfork of Feasting",
   "weaponMystery201411Notes": "Stab your enemies or dig in to your favorite foods - this versatile pitchfork does it all! Confers no benefit. November 2014 Subscriber Item.",
@@ -1364,6 +1373,15 @@
   "armorSpecialSummer2025MageText": "Fairy Wrasse Suit",
   "armorSpecialSummer2025MageNotes": "Not only does this suit have stunning colors, but it allows you to glide beautifully through the water. Swim or dance—the choice is yours! Increases Intelligence by <%= int %>. Limited Edition Summer 2025 Gear.",
 
+  "armorSpecialFall2025WarriorText": "Sasquatch Armor",
+  "armorSpecialFall2025WarriorNotes": "Neither your big feet nor your big body will be too large to fit into this seasonal armor. Increases Constitution by <%= con %>. Limited Edition Fall 2025 Gear.",
+  "armorSpecialFall2025RogueText": "Skeleton Armor",
+  "armorSpecialFall2025RogueNotes": "A hard and narrow target in this seasonal armor is hardest to hit. Increases Perception by <%= per %>. Limited Edition Fall 2025 Gear.",
+  "armorSpecialFall2025HealerText": "Kobold Armor",
+  "armorSpecialFall2025HealerNotes": "This seasonal armor lets you blend into the dark woods to make a strategic retreat. Increases Constitution by <%= con %>. Limited Edition Fall 2025 Gear.",
+  "armorSpecialFall2025MageText": "Masked Ghost Armor",
+  "armorSpecialFall2025MageNotes": "This seasonal armor becomes noncorporeal only after you put it on. Increases Intelligence by <%= int %>. Limited Edition Fall 2025 Gear.",
+
   "armorMystery201402Text": "Messenger Robes",
   "armorMystery201402Notes": "Shimmering and strong, these robes have many pockets to carry letters. Confers no benefit. February 2014 Subscriber Item.",
   "armorMystery201403Text": "Forest Walker Armor",
@@ -1498,6 +1516,8 @@
   "armorMystery202502Notes": "You’re full of kind-hearted jokes and japes from your ruffled collar to your gigantic shoes! Confers no benefit. February 2025 Subscriber Item.",
   "armorMystery202504Text": "Elusive Yeti Armor",
   "armorMystery202504Notes": "Abominable? More like adorable! Confers no benefit. April 2025 Subscriber Item.",
+  "armorMystery202509Text": "Windswept Wanderer's Robe",
+  "armorMystery202509Notes": "Bright silks protect you from the weather, hot or cold. Confers no benefit. September 2025 Subscriber Item.",
   
   "armorMystery301404Text": "Steampunk Suit",
   "armorMystery301404Notes": "Dapper and dashing, wot! Confers no benefit. February 3015 Subscriber Item.",
@@ -1740,6 +1760,8 @@
   "armorArmoireFlyFishingWadersNotes": "Stay perfectly warm and dry when you wade into a stream, pond, lake, or river. Increases Strength and Constitution by <%= attrs %> each. Enchanted Armoire: Fly Fishing Set (Item 2 of 3)",
   "armorArmoireRedWaistcoatText": "Red Waistcoat",
   "armorArmoireRedWaistcoatNotes": "Look smart and stunning as you tackle your tasks. There’s something secret hidden in the vest pocket—what do you think it could be? Increases Constitution and Strength by <%= attrs %> each. Enchanted Armoire: Red Waistcoat Set (Item 2 of 2)",
+  "armorArmoireSoftOrangeSuitText": "Soft Orange Suit",
+  "armorArmoireSoftOrangeSuitNotes": "Orange is a vibrant color. Wear this to bed, and you’re sure to succeed in whatever adventures you come across in your dreams. Increases Constitution and Strength by <%= attrs %> each. Enchanted Armoire: Orange Loungewear Set (Item 2 of 3).",
 
   "headgear": "helm",
   "headgearCapitalized": "Headgear",
@@ -2274,6 +2296,15 @@
   "headSpecialSummer2025MageText": "Fairy Wrasse Headdress",
   "headSpecialSummer2025MageNotes": "All will be mesmerized by the way your fins move with the currents. Increases Perception by <%= per %>. Limited Edition Summer 2025 Gear.",
 
+  "headSpecialFall2025WarriorText": "Sasquatch Mask",
+  "headSpecialFall2025WarriorNotes": "Round and hairy, this mask covers your head while you cover all your important tasks. Increases Strength by <%= str %>. Limited Edition Fall 2025 Gear.",
+  "headSpecialFall2025RogueText": "Skeleton Mask",
+  "headSpecialFall2025RogueNotes": "Pale and hooded, this mask covers your head while you cover all your important tasks. Increases Perception by <%= per %>. Limited Edition Fall 2025 Gear.",
+  "headSpecialFall2025HealerText": "Kobold Mask",
+  "headSpecialFall2025HealerNotes": "Striking and horned, this mask covers your head while you cover all your important tasks. Increases Intelligence by <%= int %>. Limited Edition Fall 2025 Gear.",
+  "headSpecialFall2025MageText": "Masked Ghost Mask",
+  "headSpecialFall2025MageNotes": "Ethereal and glowy, this mask covers your head while you cover all your important tasks. Increases Perception by <%= per %>. Limited Edition Fall 2025 Gear.",
+
   "headSpecialGaymerxText": "Rainbow Warrior Helm",
   "headSpecialGaymerxNotes": "In celebration of the GaymerX Conference, this special helmet is decorated with a radiant, colorful rainbow pattern! GaymerX is a game convention celebrating LGTBQ and gaming and is open to everyone.",
 
@@ -2679,6 +2710,8 @@
   "headArmoireFlyFishingHatNotes": "With a wide brim and spot to hold a spare lure, don’t go fly fishing without this beauty. Increases Strength and Perception by <%= attrs %> each. Enchanted Armoire: Fly Fishing Set (Item 1 of 3)",
   "headArmoireRedNewsieHatText": "Red Newsie Cap",
   "headArmoireRedNewsieHatNotes": "Extra! Extra! Read all about it: this cap is comfortable, fashionable, and practical. Increases Perception and Intelligence by <%= attrs %> each. Enchanted Armoire: Red Waistcoat Set (Item 1 of 2)",
+  "headArmoireFloppyOrangeHatText": "Orange Floppy Hat",
+  "headArmoireFloppyOrangeHatNotes": "Many spells have been sewn into this simple hat, giving it an outrageous orange color. Increases all stats by <%= attrs %> each. Enchanted Armoire: Orange Loungewear Set (Item 1 of 3).",
 
   "offhand": "off-hand item",
   "offHandCapitalized": "Off-Hand Item",
@@ -2981,10 +3014,15 @@
 
   "shieldSpecialSummer2025WarriorText": "Scallop Shell Shield",
   "shieldSpecialSummer2025WarriorNotes": "The colors are beautiful, but the ridges are dangerous. Foes, look out! Increases Constitution by <%= con %>. Limited Edition Summer 2025 Gear.",
-  "shieldSpecialSummer2025RogueText": "Squid Tentacle",
   "shieldSpecialSummer2025RogueNotes": "This tentacle looks willowy, but its suckers grip tight. Foes, look out! Increases Strength by <%= str %>. Limited Edition Summer 2025 Gear.",
   "shieldSpecialSummer2025HealerText": "Sea Angel Shield",
   "shieldSpecialSummer2025HealerNotes": "This shield looks simple, but it has noxious properties. Foes, look out! Increases Constitution by <%= con %>. Limited Edition Summer 2025 Gear.",
+
+  "shieldSpecialFall2025WarriorText": "Sasquatch Shield",
+  "shieldSpecialFall2025WarriorNotes": "Buy yourself some extra time to think and plan by shielding yourself from your next Dailies. Increases Constitution by <%= con %>. Limited Edition Fall 2025 Gear.",
+  "shieldSpecialFall2025RogueNotes": "A mighty weapon to cut your To Do’s right in half. Increases Strength by <%= str %>. Limited Edition Fall 2025 Gear.",
+  "shieldSpecialFall2025HealerText": "Kobold Shield",
+  "shieldSpecialFall2025HealerNotes": "Buy yourself some extra time to gather supplies by shielding yourself from your chores. Increases Constitution by <%= con %>. Limited Edition Fall 2025 Gear.",
 
   "shieldMystery201601Text": "Resolution Slayer",
   "shieldMystery201601Notes": "This blade can be used to parry away all distractions. Confers no benefit. January 2016 Subscriber Item.",
@@ -3190,6 +3228,8 @@
   "shieldArmoireBeekeepersHiveNotes": "Beehives serve as both homes and worksites. You might need to talk to your bees about a good work-life balance. Increases Strength by <%= str %>. Enchanted Armoire: Beekeeper Set (Item 4 of 4)",
   "shieldArmoireFlyFishingRodText": "Fly Fishing Rod",
   "shieldArmoireFlyFishingRodNotes": "Put a lure on this long and flexible rod and fish will mistake it for an insect every single time. Increases Strength and Intelligence by <%= attrs %> each. Enchanted Armoire: Fly Fishing Set (Item 3 of 3)",
+  "shieldArmoireSoftOrangePillowText": "Soft Orange Pillow",
+  "shieldArmoireSoftOrangePillowNotes": "The ready warrior packs a pillow for any expedition. Get ready to take on new obligations… even while you nap. Increases Intelligence and Perception by <%= attrs %> each. Enchanted Armoire: Orange Loungewear Set (Item 3 of 3).",
 
   "back": "Back Accessory",
   "backBase0Text": "No Back Accessory",
@@ -3369,6 +3409,8 @@
   "bodyMystery202107Notes": "This trusty companion will never let you down and will always keep your spirits buoyant! Confers no benefit. July 2021 Subscriber Item.",
   "bodyMystery202411Text": "Bristled Pauldrons",
   "bodyMystery202411Notes": "The formidable spikes on these pauldrons are perfect for charging ahead with your to-do list. Confers no benefit. November 2024 Subscriber Item.",
+  "bodyMystery202509Text": "Windswept Wanderer's Scarf",
+  "bodyMystery202509Notes": "This scarf shields your face from the wind and also - looks pretty darn cool. Confers no benefit. September 2025 Subscriber Item.",
 
   "bodyArmoireCozyScarfText": "Cozy Scarf",
   "bodyArmoireCozyScarfNotes": "This fine scarf will keep you warm as you go about your wintry business. Increases Constitution and Perception by <%= attrs %> each. Enchanted Armoire: Lamplighter's Set (Item 4 of 4).",
@@ -3626,7 +3668,6 @@
   "eyewearMystery202406Notes": "Try to avoid having this pulled off by a gang of meddling kids and their talking dog. Confers no benefit. June 2024 Subscriber Item.",
   "eyewearMystery202503Text": "Jade Juggernaut Eyes",
   "eyewearMystery202503Notes": "This piercing gaze will strike terror into any fighter who dares to challenge you! Confers no benefit. March 2025 Subscriber Item.",
-
 
   "eyewearMystery301404Text": "Eyewear Goggles",
   "eyewearMystery301404Notes": "No eyewear could be fancier than a pair of goggles - except, perhaps, for a monocle. Confers no benefit. April 3015 Subscriber Item.",
