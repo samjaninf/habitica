@@ -669,7 +669,7 @@ const backgrounds = {
     autumn_swamp: { },
   },
   backgrounds102025: {
-    forest_witchs_cottage: { },
+    inside_forest_witchs_cottage: { },
   },
   backgrounds112025: {
     castle_keep_with_banners: { },
