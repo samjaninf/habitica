@@ -815,6 +815,11 @@
   width: 141px;
   height: 147px;
 }
+.background_castle_keep_with_banners {
+  background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/background_castle_keep_with_banners.png');
+  width: 141px;
+  height: 147px;
+}
 .background_cemetery_gate {
   background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/background_cemetery_gate.png');
   width: 141px;
@@ -1548,6 +1553,11 @@
 }
 .background_inside_an_ornament {
   background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/background_inside_an_ornament.png');
+  width: 141px;
+  height: 147px;
+}
+.background_inside_forest_witchs_cottage {
+  background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/background_inside_forest_witchs_cottage.png');
   width: 141px;
   height: 147px;
 }
@@ -29570,6 +29580,16 @@
   width: 114px;
   height: 90px;
 }
+.broad_armor_armoire_blackPartyDress {
+  background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/broad_armor_armoire_blackPartyDress.png');
+  width: 114px;
+  height: 90px;
+}
+.broad_armor_armoire_blacksmithsApron {
+  background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/broad_armor_armoire_blacksmithsApron.png');
+  width: 114px;
+  height: 90px;
+}
 .broad_armor_armoire_blueMoonShozoku {
   background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/broad_armor_armoire_blueMoonShozoku.png');
   width: 114px;
@@ -30210,8 +30230,18 @@
   width: 114px;
   height: 90px;
 }
+.head_armoire_blackHairbow {
+  background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/head_armoire_blackHairbow.png');
+  width: 90px;
+  height: 90px;
+}
 .head_armoire_blackSpookySorceryHat {
   background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/head_armoire_blackSpookySorceryHat.png');
+  width: 114px;
+  height: 90px;
+}
+.head_armoire_blacksmithsGoggles {
+  background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/head_armoire_blacksmithsGoggles.png');
   width: 114px;
   height: 90px;
 }
@@ -31170,6 +31200,16 @@
   width: 114px;
   height: 90px;
 }
+.slim_armor_armoire_blackPartyDress {
+  background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/slim_armor_armoire_blackPartyDress.png');
+  width: 114px;
+  height: 90px;
+}
+.slim_armor_armoire_blacksmithsApron {
+  background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/slim_armor_armoire_blacksmithsApron.png');
+  width: 114px;
+  height: 90px;
+}
 .slim_armor_armoire_blueMoonShozoku {
   background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/slim_armor_armoire_blueMoonShozoku.png');
   width: 114px;
@@ -31757,6 +31797,11 @@
 }
 .weapon_armoire_beekeepersSmoker {
   background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/weapon_armoire_beekeepersSmoker.png');
+  width: 114px;
+  height: 90px;
+}
+.weapon_armoire_blacksmithsHammer {
+  background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/weapon_armoire_blacksmithsHammer.png');
   width: 114px;
   height: 90px;
 }
@@ -35785,6 +35830,11 @@
   width: 117px;
   height: 120px;
 }
+.back_mystery_202510 {
+  background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/back_mystery_202510.png');
+  width: 114px;
+  height: 90px;
+}
 .body_mystery_202509 {
   background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/body_mystery_202509.png');
   width: 117px;
@@ -35795,10 +35845,25 @@
   width: 117px;
   height: 120px;
 }
+.eyewear_mystery_202510 {
+  background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/eyewear_mystery_202510.png');
+  width: 114px;
+  height: 90px;
+}
+.shield_mystery_202511 {
+  background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/shield_mystery_202511.png');
+  width: 114px;
+  height: 90px;
+}
 .slim_armor_mystery_202509 {
   background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/slim_armor_mystery_202509.png');
   width: 117px;
   height: 120px;
+}
+.weapon_mystery_202511 {
+  background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/weapon_mystery_202511.png');
+  width: 114px;
+  height: 90px;
 }
 .broad_armor_mystery_301404 {
   background-image: url('https://habitica-assets.s3.amazonaws.com/mobileApp/images/broad_armor_mystery_301404.png');

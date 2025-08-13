@@ -547,6 +547,16 @@ const armor = {
     str: 8,
     set: 'orangeLoungewear',
   },
+  blackPartyDress: {
+    con: 7,
+    int: 7,
+    str: 7,
+    set: 'blackHairbow',
+  },
+  blacksmithsApron: {
+    con: 11,
+    set: 'blacksmith',
+  },
 };
 
 const body = {
@@ -1119,6 +1129,16 @@ const head = {
     per: 4,
     str: 4,
     set: 'orangeLoungewear',
+  },
+  blackHairbow: {
+    con: 5,
+    int: 5,
+    str: 5,
+    set: 'blackHairbow',
+  },
+  blacksmithsGoggles: {
+    per: 11,
+    set: 'blacksmith',
   },
 };
 
@@ -2012,6 +2032,10 @@ const weapon = {
   beekeepersSmoker: {
     int: 12,
     set: 'beekeepersSet',
+  },
+  blacksmithsHammer: {
+    str: 11,
+    set: 'blacksmith',
   },
 };
 

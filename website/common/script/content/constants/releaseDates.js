@@ -24,6 +24,8 @@ export const ARMOIRE_RELEASE_DATES = {
   flyFishingSet: { year: 2025, month: 7 },
   redWaistcoatSet: { year: 2025, month: 8 },
   orangeLoungewear: { year: 2025, month: 9 },
+  blackHairbow: { year: 2025, month: 10 },
+  blacksmith: { year: 2025, month: 11 },
 };
 
 export const EGGS_RELEASE_DATES = {

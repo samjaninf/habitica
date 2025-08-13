@@ -668,6 +668,12 @@ const backgrounds = {
   backgrounds092025: {
     autumn_swamp: { },
   },
+  backgrounds102025: {
+    forest_witchs_cottage: { },
+  },
+  backgrounds112025: {
+    castle_keep_with_banners: { },
+  },
   eventBackgrounds: {
     birthday_bash: {
       price: 0,
