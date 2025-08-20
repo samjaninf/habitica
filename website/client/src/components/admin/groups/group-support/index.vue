@@ -3,18 +3,25 @@
     <h2>{{ group.name }}</h2>
     <supportContainer
       :title="$t('groupData')"
+        :onSave="updateGroup"
     >
       <groupData
         :group="group"
       />
     </supportContainer>
     <supportContainer
-      :title="$t('groupPlanSubscription')"
-    />
+      :title="$t('groupPlanSubscription')">
+      <groupPlan
+        :group="group"
+      />
+    </supportContainer>
     <supportContainer
       v-if="group.type === 'party'"
-      :title="$t('questDetails')"
-    />
+      :title="$t('questDetails')">
+      <quest
+        :group="group"
+      />
+      </supportContainer>
     <supportContainer
       :title="$t('members')"
     >
@@ -30,12 +37,16 @@ import { userStateMixin } from '../../../../mixins/userState';
 import supportContainer from '../../supportContainer.vue';
 import groupData from './groupData.vue';
 import members from './members.vue';
+import groupPlan from './groupPlan.vue';
+import quest from './quest.vue';
 
 export default {
   components: {
     supportContainer,
     groupData,
     members,
+    groupPlan,
+    quest,
   },
   mixins: [userStateMixin],
   data () {
@@ -59,10 +70,19 @@ export default {
     async loadGroup (groupId) {
       this.$emit('changeGroupId', groupId);
       this.group = await this.$store.dispatch('admin:getGroup', { groupId });
+
     },
     async updateGroup () {
-      await this.$store.dispatch('admin:updateGroup', { group: this.group });
-      this.$emit('groupSaved', this.group);
+      if (this.group && !this.group.id) {
+        this.group.id = this.group._id || this.groupId; // Ensure group has an id property
+      }
+      await this.$store.dispatch('guilds:update', { group: this.group });
+      this.group = await this.$store.dispatch('admin:getGroup', { groupId: this.group.id })
+      await this.$store.dispatch('snackbars:add', {
+        title: '',
+        text: `Group updated`,
+        type: 'info',
+      });
     },
   },
 };

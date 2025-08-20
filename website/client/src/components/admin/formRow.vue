@@ -1,6 +1,6 @@
 <template>
   <div class="form-group row">
-    <label class="col-sm-3 col-form-label"><slot name="label">{{ label }}</slot></label>
+    <label class="col-sm-3 col-form-label"><slot name="label">{{ label }}:</slot></label>
     <div class="col-sm-9">
       <slot>
         <textarea

@@ -10,6 +10,11 @@
       input-type="textarea"
     />
     <form-row
+      v-model="group.chatLimitCount"
+      label="Chat limit"
+      input-type="number"
+    />
+    <form-row
       v-model="group.description"
       :label="$t('groupDescription')"
       input-type="textarea"

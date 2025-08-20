@@ -68,6 +68,13 @@
           </strong>
         </div>
         <div
+          v-if="!userIsPartyLeader"
+          class="btn btn-warning mr-2"
+          @click="makePartyLeader()"
+        >
+          Make Party Leader
+        </div>
+        <div
           class="btn btn-danger"
           @click="removeFromParty()"
         >
@@ -288,8 +295,6 @@ function resetData (self) {
 
   if (self.partyNotExistError) {
     self.errorsOrWarningsExist = true;
-  } else {
-    self.userIsPartyLeader = self.groupPartyData.leader === self.userId;
   }
 
   // check for quest errors even if party doesn't exist (user can have old quest data)
@@ -333,7 +338,6 @@ export default {
   },
   data () {
     return {
-      userIsPartyLeader: false,
       questStatus: '',
       questErrors: '',
       errorsOrWarningsExist: false,
@@ -344,6 +348,11 @@ export default {
     resetCounter () {
       resetData(this);
     },
+  },
+  computed: {
+    userIsPartyLeader () {
+      return this.groupPartyData.leader === this.userId;
+    }
   },
   mounted () {
     resetData(this);
@@ -356,6 +365,12 @@ export default {
         reloadData: true,
       });
     },
+    async makePartyLeader () {
+      await this.$store.dispatch('guilds:update', { group: {
+        id: this.groupPartyData._id,
+        leader: this.userId,
+      } });
+    }
   },
 };
 </script>
