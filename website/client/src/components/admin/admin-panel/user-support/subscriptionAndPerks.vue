@@ -206,7 +206,7 @@
               {{ dateFormat(hero.purchased.plan.dateTerminated) }}
             </strong>
             <a
-              v-if="!hero.purchased.plan.dateTerminated && hero.purchased.plan.planId"
+              v-if="!hero.purchased.plan.dateTerminated && hero.purchased.plan.planId && !isGroupPlanMember"
               v-b-modal.sub_termination_modal
               class="btn btn-danger"
               href="#"
@@ -291,7 +291,7 @@
           </div>
         </div>
         <div
-          v-if="!isConvertingToGroupPlan && hero.purchased.plan.planId !== 'group_plan_auto'"
+          v-if="!isConvertingToGroupPlan && !isGroupPlanMember"
           class="form-group row"
         >
           <div class="offset-sm-3 col-sm-9">
@@ -600,6 +600,9 @@ export default {
     playOrdersUrl () {
       return `${PLAY_CONSOLE_ORDERS_BASE_URL}${this.paymentDetails?.transactionId || ''}`;
     },
+    isGroupPlanMember () {
+      return this.hero.purchased.plan.planId === 'group_plan_auto'
+    }
   },
   methods: {
     dateFormat (date) {
