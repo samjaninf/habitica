@@ -135,20 +135,9 @@
             </select>
           </div>
         </div>
-        <div
-          class="form-group row"
-        >
-          <label class="col-sm-3 col-form-label">
-            Customer ID:
-          </label>
-          <div class="col-sm-9">
-            <input
-              v-model="hero.purchased.plan.customerId"
-              class="form-control"
-              type="text"
-            >
-          </div>
-        </div>
+        <formRow
+          label="Customer ID"
+          v-model="hero.purchased.plan.customerId" />
         <div
           v-if="hero.purchased.plan.planId === 'group_plan_auto'"
           class="form-group row"
@@ -198,176 +187,74 @@
             </div>
           </div>
         </div>
-        <div
+        <formRow
+          label="Creation date"
           v-if="hero.purchased.plan.dateCreated"
-          class="form-group row"
-        >
-          <label class="col-sm-3 col-form-label">
-            Creation date:
-          </label>
-          <div class="col-sm-9">
-            <div class="input-group">
-              <input
-                v-model="hero.purchased.plan.dateCreated"
-                class="form-control"
-                type="text"
-              >
-              <div class="input-group-append">
-                <strong class="input-group-text">
-                  {{ dateFormat(hero.purchased.plan.dateCreated) }}
-                </strong>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
+          v-model="hero.purchased.plan.dateCreated"
+          :suffix="dateFormat(hero.purchased.plan.dateCreated)" />
+        <formRow
+          label="Current sub start date"
           v-if="hero.purchased.plan.dateCurrentTypeCreated"
-          class="form-group row"
-        >
-          <label class="col-sm-3 col-form-label">
-            Current sub start date:
-          </label>
-          <div class="col-sm-9">
-            <div class="input-group">
-              <input
-                v-model="hero.purchased.plan.dateCurrentTypeCreated"
-                class="form-control"
-                type="text"
-              >
-              <div class="input-group-append">
-                <strong class="input-group-text">
-                  {{ dateFormat(hero.purchased.plan.dateCurrentTypeCreated) }}
-                </strong>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-sm-3 col-form-label">
-            Termination date:
-          </label>
-          <div class="col-sm-9">
-            <div class="input-group">
-              <input
-                v-model="hero.purchased.plan.dateTerminated"
-                class="form-control"
-                type="text"
-              >
-              <div class="input-group-append">
-                <strong class="input-group-text">
-                  {{ dateFormat(hero.purchased.plan.dateTerminated) }}
-                </strong>
-                <a
-                  v-if="!hero.purchased.plan.dateTerminated && hero.purchased.plan.planId"
-                  v-b-modal.sub_termination_modal
-                  class="btn btn-danger"
-                  href="#"
-                >
-                  Terminate
-                </a>
-              </div>
-            </div>
-            <small
-              v-if="isSubscribed() && !isCancelled()"
-              class="text-success"
+          v-model="hero.purchased.plan.dateCurrentTypeCreated"
+          :suffix="dateFormat(hero.purchased.plan.dateCurrentTypeCreated)" />
+        <formRow
+          label="Termination date"
+          v-model="hero.purchased.plan.dateTerminated"
+          :suffix="dateFormat(hero.purchased.plan.dateTerminated)">
+          <template #suffix>
+            <strong class="input-group-text">
+              {{ dateFormat(hero.purchased.plan.dateTerminated) }}
+            </strong>
+            <a
+              v-if="!hero.purchased.plan.dateTerminated && hero.purchased.plan.planId"
+              v-b-modal.sub_termination_modal
+              class="btn btn-danger"
+              href="#"
             >
+              Terminate
+            </a>
+          </template>
+          <template #helpText v-if="isSubscribed() && !isCancelled()">
+            <span class="text-success">
               The subscription does not have a termination date and is active.
-            </small>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-sm-3 col-form-label">
-            Cumulative months:
-          </label>
-          <div class="col-sm-9">
-            <input
-              v-model="hero.purchased.plan.cumulativeCount"
-              class="form-control"
-              type="number"
-              min="0"
-              step="1"
+            </span>
+          </template>
+        </formRow>
+        <formRow
+          label="Cumulative months"
+          v-model="hero.purchased.plan.cumulativeCount"
+          inputType="number"
+          helpText="Cumulative subscribed months across subscription periods." />
+        <formRow
+          label="Extra months"
+          v-model="hero.purchased.plan.extraMonths"
+          inputType="number"
+          helpText="Additional credit that is applied if a subscription is cancelled.">
+          <template #suffix v-if="hero.purchased.plan.dateTerminated && hero.purchased.plan.extraMonths > 0">
+            <a
+              class="btn btn-warning"
+              @click="applyExtraMonths"
             >
-            <small class="text-secondary">
-              Cumulative subscribed months across subscription periods.
-            </small>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-sm-3 col-form-label">
-            Extra months:
-          </label>
-          <div class="col-sm-9">
-            <div class="input-group">
-              <input
-                v-model="hero.purchased.plan.extraMonths"
-                class="form-control"
-                type="number"
-                min="0"
-                step="any"
-              >
-              <div class="input-group-append">
-                <a
-                  v-if="hero.purchased.plan.dateTerminated && hero.purchased.plan.extraMonths > 0"
-                  class="btn btn-warning"
-                  @click="applyExtraMonths"
-                >
-                  Apply Credit
-                </a>
-              </div>
-            </div>
-            <small class="text-secondary">
-              Additional credit that is applied if a subscription is cancelled.
-            </small>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-sm-3 col-form-label">
-            Received hourglass bonus:
-          </label>
-          <div class="col-sm-9">
-            <div class="input-group">
-              <input
-                v-model="hero.purchased.plan.hourglassPromoReceived"
-                class="form-control"
-                type="text"
-              >
-              <div class="input-group-append">
-                <strong class="input-group-text">
-                  {{ dateFormat(hero.purchased.plan.hourglassPromoReceived) }}
-                </strong>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-sm-3 col-form-label">
-            Mystic Hourglasses:
-          </label>
-          <div class="col-sm-9">
-            <input
-              v-model="hero.purchased.plan.consecutive.trinkets"
-              class="form-control"
-              type="number"
-              min="0"
-              step="1"
-            >
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-sm-3 col-form-label">
-            Gem cap increase:
-          </label>
-          <div class="col-sm-9">
-            <input
-              v-model="hero.purchased.plan.consecutive.gemCapExtra"
-              class="form-control"
-              type="number"
-              min="0"
-              max="26"
-              step="2"
-            >
-          </div>
-        </div>
+              Apply Credit
+            </a>
+          </template>
+        </formRow>
+        <formRow
+          label="Received hourglass bonus"
+          v-model="hero.purchased.plan.hourglassPromoReceived"
+          :suffix="dateFormat(hero.purchased.plan.hourglassPromoReceived)" />
+        <formRow
+          label="Mystic Hourglasses"
+          v-model="hero.purchased.plan.consecutive.trinkets"
+          inputType="number"
+          min="0" />
+        <formRow
+          label="Gem cap increase"
+          v-model="hero.purchased.plan.consecutive.gemCapExtra"
+          inputType="number"
+          min="0"
+          max="26"
+          step="2" />
         <div class="form-group row">
           <label class="col-sm-3 col-form-label">
             Total Gem cap:
@@ -376,21 +263,12 @@
             {{ Number(hero.purchased.plan.consecutive.gemCapExtra) + 24 }}
           </strong>
         </div>
-        <div class="form-group row">
-          <label class="col-sm-3 col-form-label">
-            Gems bought this month:
-          </label>
-          <div class="col-sm-9">
-            <input
-              v-model="hero.purchased.plan.gemsBought"
-              class="form-control"
-              type="number"
-              min="0"
-              :max="hero.purchased.plan.consecutive.gemCapExtra + 24"
-              step="1"
-            >
-          </div>
-        </div>
+        <formRow
+          label="Gems bought this month"
+          v-model="hero.purchased.plan.gemsBought"
+          inputType="number"
+          min="0"
+              :max="hero.purchased.plan.consecutive.gemCapExtra + 24" />
         <div class="form-group row">
           <label class="col-sm-3 col-form-label">
             Mystery Items:
@@ -608,6 +486,7 @@ import { getPlanContext } from '@/../../common/script/cron';
 import subscriptionBlocks from '@/../../common/script/content/subscriptionBlocks';
 import saveHero from '../mixins/saveHero';
 import LoadingSpinner from '@/components/ui/loadingSpinner';
+import FormRow from '../../formRow.vue';
 
 const PLAY_CONSOLE_ORDERS_BASE_URL = import.meta.env.PLAY_CONSOLE_ORDERS_BASE_URL;
 
@@ -661,6 +540,7 @@ const humandReadablePaymentDetails = {
 export default {
   components: {
     LoadingSpinner,
+    FormRow,
   },
   mixins: [saveHero],
   props: {
@@ -792,7 +672,6 @@ export default {
       return date ? moment(date).format('MM/DD/YYYY') : '---';
     },
     isSubscribed () {
-      console.log(this.hero.purchased.plan.customerId, this.hero.purchased.plan.dateTerminated);
       return this.hero.purchased.plan
         && this.hero.purchased.plan.customerId
         && this.hero.purchased.plan.planId
