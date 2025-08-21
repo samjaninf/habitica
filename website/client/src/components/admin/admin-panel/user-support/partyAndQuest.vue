@@ -22,9 +22,6 @@
       >
         <p v-if="partyNotExistError">
           ERROR: User has a Party ID but that Party does not exist.
-          If you are seeing a red error notification on screen now
-          ("<strong>Group with id ... not found</strong>"), it's refering to this issue.
-          <br>Ask a database admin to delete the user's Party ID ({{ userPartyData._id }}).
         </p>
         <p
           v-if="questErrors"

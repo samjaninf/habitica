@@ -510,13 +510,22 @@ api.updateHero = {
     const savedHero = await hero.save();
 
     if (updateData.removeFromParty) {
-      await leaveGroup({
-        user: savedHero,
-        groupId: savedHero.party._id,
-        res,
-        keep: false,
-        keepChallenges: false,
-      });
+      try {
+        await leaveGroup({
+          user: savedHero,
+          groupId: savedHero.party._id,
+          res,
+          keep: false,
+          keepChallenges: false,
+        });
+      } catch (err) {
+        if (err instanceof NotFound) {
+          savedHero.party = null; // Party does not exist, so just unset it
+          await savedHero.save();
+        } else {
+          throw err; // re-throw other errors
+        }
+      }
     }
 
     const heroJSON = savedHero.toJSON();
