@@ -1,6 +1,11 @@
 <template>
   <form>
     <form-row
+      v-model="group.type"
+      label="Group Type"
+      :editable="false"
+    />
+    <form-row
       v-model="group.name"
       :label="$t('groupName')"
     />

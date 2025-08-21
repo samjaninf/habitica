@@ -1,10 +1,14 @@
 <template>
   <div class="form-group row">
     <label class="col-sm-3 col-form-label"><slot name="label">{{ label }}:</slot></label>
-    <div class="col-sm-9">
+    <div class="col-sm-9"
+      :class="editable ? 'editable' : 'col-form-label'">
       <slot>
+        <strong v-if="!editable">
+          {{ value || "---" }}
+        </strong>
         <textarea
-          v-if="inputType === 'textarea'"
+          v-else-if="inputType === 'textarea'"
           :value="value"
           class="form-control"
           :rows="rows"
@@ -18,6 +22,12 @@
           @input="$emit('input', $event.target.value)"
         >
       </slot>
+      <div class="form-text text-muted" v-if="$slots.helpText">
+        <slot name="helpText"></slot>
+      </div>
+      <div class="form-text text-muted mt-1" v-if="$slots.subtitle">
+        <slot name="subtitle"></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -38,6 +48,10 @@ export default {
     inputType: {
       type: String,
       default: 'text',
+    },
+    editable: {
+      type: Boolean,
+      default: true,
     },
     rows: {
       default: 3,

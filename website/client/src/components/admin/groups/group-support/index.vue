@@ -1,10 +1,15 @@
 <template>
   <div v-if="hasPermission(user, 'groupSupport')">
     <h2>{{ group.name }}</h2>
+    <router-link
+      v-if="isGroupPlan"
+      :to="{'name': 'groupPlanDetail', 'params': {'groupId': groupId}}">
+      Group Plan Page
+    </router-link>
+    
     <supportContainer
       :title="$t('groupData')"
-        :onSave="updateGroup"
-    >
+        :onSave="updateGroup">
       <groupData
         :group="group"
       />
@@ -23,8 +28,7 @@
       />
       </supportContainer>
     <supportContainer
-      :title="$t('members')"
-    >
+      :title="$t('members')">
       <members
         :group="group"
       />
@@ -62,6 +66,14 @@ export default {
   },
   mounted () {
     this.groupId = this.$route.params.groupId;
+  },
+  computed: {
+    isGroupPlan () {
+      return this.group
+        && this.group.purchased
+        && this.group.purchased.plan
+        && this.group.purchased.plan.planId;
+    },
   },
   methods: {
     clearData () {
